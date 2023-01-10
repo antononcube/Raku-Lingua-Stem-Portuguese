@@ -74,12 +74,12 @@ and
 
 ## TODO
 
-- [ ] DONE Respect the word case in the returned result. 
+- [ ] TODO Respect the word case in the returned result.
 
-   - `PortugueseStem('tablado')` should return `'tabl'`. 
-   - (Not `'tabl'` as it currently does.) 
-   
-- [ ] DONE CLI that can be inserted in UNIX pipelines.
+  - `PortugueseStem('tablado')` should return `'tabl'`.
+  - (Not `'tabl'` as it currently does.)
+
+- [X] DONE CLI that can be inserted in UNIX pipelines.
 
 - [ ] TODO Gallician stemmer.
 
