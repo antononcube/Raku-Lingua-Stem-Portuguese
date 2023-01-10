@@ -2,8 +2,8 @@
 
 ## Introduction
 
-This Raku package is for stemming Portuguese words.
-It implements the Snowball algorithm presented in
+This Raku package is for stemming Portuguese words. 
+It implements the Snowball algorithm presented in 
 [[SNa1](http://snowball.tartarus.org/algorithms/portuguese/stemmer.html)].
 
 -------
@@ -49,7 +49,7 @@ PortugueseStem --format=raku "Módulo Raku que fornece um procedimento para a l�
 PortugueseStem Verificar a exatidão da seleção usando dicionários e regras
 ```
 
-Here is a pipeline example using the CLI function `get-tokens` of the package
+Here is a pipeline example using the CLI function `get-tokens` of the package 
 ["Grammar::TokenProcessing"](https://github.com/antononcube/Raku-Grammar-TokenProcessing),
 [AAp1]:
 
@@ -74,11 +74,11 @@ and
 
 ## TODO
 
-- [ ] DONE Respect the word case in the returned result.
+- [ ] DONE Respect the word case in the returned result. 
 
-  - `PortugueseStem('tablado')` should return `'tabl'`.
-  - (Not `'tabl'` as it currently does.)
-
+   - `PortugueseStem('tablado')` should return `'tabl'`. 
+   - (Not `'tabl'` as it currently does.) 
+   
 - [ ] DONE CLI that can be inserted in UNIX pipelines.
 
 - [ ] TODO Gallician stemmer.
