@@ -38,7 +38,7 @@ PortugueseStem --help
 Here are example shell commands of using the CLI function `PortugueseStem`:
 
 ```shell
-PortugueseStem Какие
+PortugueseStem Boataria
 ```
 
 ```shell
@@ -76,7 +76,7 @@ and
 
 - [ ] TODO Respect the word case in the returned result.
 
-  - `PortugueseStem('tablado')` should return `'tabl'`.
+  - `PortugueseStem('TABLADO')` should return `'TABL'`.
   - (Not `'tabl'` as it currently does.)
 
 - [X] DONE CLI that can be inserted in UNIX pipelines.

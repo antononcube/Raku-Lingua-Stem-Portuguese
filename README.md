@@ -2,8 +2,8 @@
 
 ## Introduction
 
-This Raku package is for stemming Portuguese words.
-It implements the Snowball algorithm presented in
+This Raku package is for stemming Portuguese words. 
+It implements the Snowball algorithm presented in 
 [[SNa1](http://snowball.tartarus.org/algorithms/portuguese/stemmer.html)].
 
 -------
@@ -16,11 +16,17 @@ The `PortugueseStem` function is used to find stems:
 use Lingua::Stem::Portuguese;
 say PortugueseStem('brotação')
 ```
+```
+# brot
+```
 
 `PortugueseStem` also works with lists of words:
 
 ```perl6
 say PortugueseStem('Os brotos são aguardados com paciência, bebida e bacon.'.words)
+```
+```
+# (Os brot sao aguard com paciencia, beb e bacon.)
 ```
 
 The function `portuguese-word-stem` can be used as a synonym of `PortugueseStem`.
@@ -34,22 +40,42 @@ The package provides the CLI function `PortugueseStem`. Here is its usage messag
 ```shell
 PortugueseStem --help
 ```
+```
+# Usage:
+#   PortugueseStem <text> [--splitter=<Str>] [--format=<Str>] -- Finds stems of Portuguese words in text.
+#   PortugueseStem [<words> ...] [--format=<Str>] -- Finds stems of Portuguese words.
+#   PortugueseStem [--format=<Str>] -- Finds stems of Portuguese words in (pipeline) input.
+#   
+#     <text>              Text to spilt and its words stemmed.
+#     --splitter=<Str>    String to make a split regex with. [default: '\W+']
+#     --format=<Str>      Output format one of 'text', 'lines', or 'raku'. [default: 'text']
+#     [<words> ...]       Words to be stemmed.
+```
 
 Here are example shell commands of using the CLI function `PortugueseStem`:
 
 ```shell
-PortugueseStem Какие
+PortugueseStem Boataria
+```
+```
+# Boat
 ```
 
 ```shell
 PortugueseStem --format=raku "Módulo Raku que fornece um procedimento para a língua portuguesa."
 ```
+```
+# ["Modul", "Raku", "que", "fornec", "um", "proced", "par", "a", "lingu", "portugu", ""]
+```
 
 ```shell
 PortugueseStem Verificar a exatidão da seleção usando dicionários e regras
 ```
+```
+# Verific a exatid da selec us dicion e regr
+```
 
-Here is a pipeline example using the CLI function `get-tokens` of the package
+Here is a pipeline example using the CLI function `get-tokens` of the package 
 ["Grammar::TokenProcessing"](https://github.com/antononcube/Raku-Grammar-TokenProcessing),
 [AAp1]:
 
@@ -76,7 +102,7 @@ and
 
 - [ ] TODO Respect the word case in the returned result.
 
-  - `PortugueseStem('tablado')` should return `'tabl'`.
+  - `PortugueseStem('TABLADO')` should return `'TABL'`.
   - (Not `'tabl'` as it currently does.)
 
 - [X] DONE CLI that can be inserted in UNIX pipelines.
