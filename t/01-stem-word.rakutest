@@ -1,0 +1,40 @@
+use v6.d;
+use Test;
+
+use lib '.';
+use lib './lib';
+
+use Lingua::Stem::Portuguese;
+
+#`[
+my %stemWords =
+        boat => <boataria boate boates boatos>,
+        químic => <química químicas químicoquímicos>,
+        quint => <quinto quintos>;
+
+%stemWords = %stemWords.map({ $_.value.Array X=> $_.key }).flat;
+
+plan 2;
+
+## 1
+is %stemWords.elems, 9, 'expected length';
+
+## 2
+is reduce(&infix:<&&>, %stemWords.map({ PortugueseStem($_.key) eq $_.value })),
+        True,
+        'correct stems';
+]
+
+plan 1;
+
+# 1
+my @words = <bons chilena pezinho existencialista beberiam>;
+my @stems = <bom chilen pe exist beb>;
+
+my %stemWords1 = @words Z=> @stems;
+
+is reduce(&infix:<&&>, %stemWords1.map({ PortugueseStem($_.key) eq $_.value })),
+        True,
+        'correct stems 1';
+
+done-testing;
