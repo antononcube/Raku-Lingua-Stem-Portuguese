@@ -266,6 +266,7 @@ multi PortugueseStem(@words --> List) {
 #| PortugueseStem
 multi PortugueseStem(Str:D $word is copy --> Str) {
 
+    $word = $word.lc;
     $word = strip('plural', $word) if $word ~~ /s $/;
     $word = strip('femin', $word) if $word ~~ /a $/;
     for <augment adv noun verb vowel accent> -> $op {
