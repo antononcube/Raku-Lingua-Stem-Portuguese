@@ -245,7 +245,7 @@ sub strip($cmd, $word is copy) {
     } else {
         my %cmdref = %rule{$cmd};
         for %cmdref.keys.sort({ -$_.chars }) -> $k {
-            my $patt = / ^ (. ** { %cmdref{$k}[0] }..*) $k $/;
+            my $patt = / ^ (. ** { %cmdref{$k}[0] .. * }) $k $/;
             if $word ~~ $patt {
                 $word = $word.subst( $patt, { "$0" ~ (%cmdref{$k}[1])});
                 last;
