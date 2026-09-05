@@ -8,6 +8,22 @@ It implements the Snowball algorithm presented in
 
 -------
 
+## Installation
+
+From Zef ecosystem:
+
+```
+zef install Lingua::Stem::Portuguese
+```
+
+From GitHub:
+
+```
+zef install https://github.com/antononcube/Raku-Lingua-Stem-Portuguese.git
+```
+
+-------
+
 ## Usage examples
 
 The `PortugueseStem` function is used to find stems:
@@ -26,7 +42,7 @@ say PortugueseStem('brotação')
 say PortugueseStem('Os brotos são aguardados com paciência, bebida e bacon.'.words)
 ```
 ```
-# (Os brot sao aguard com paciencia, beb e bacon.)
+# (o brot s aguard com paciencia, beb e bacon.)
 ```
 
 The function `portuguese-word-stem` can be used as a synonym of `PortugueseStem`.
@@ -58,21 +74,21 @@ Here are example shell commands of using the CLI function `PortugueseStem`:
 PortugueseStem Boataria
 ```
 ```
-# Boat
+# boat
 ```
 
 ```shell
 PortugueseStem --format=raku "Módulo Raku que fornece um procedimento para a língua portuguesa."
 ```
 ```
-# ["Modul", "Raku", "que", "fornec", "um", "proced", "par", "a", "lingu", "portugu", ""]
+# ["modul", "raku", "que", "fornec", "um", "proced", "p", "a", "lingu", "portugu", ""]
 ```
 
 ```shell
 PortugueseStem Verificar a exatidão da seleção usando dicionários e regras
 ```
 ```
-# Verific a exatid da selec us dicion e regr
+# verific a exatid da selec us dicion e regr
 ```
 
 Here is a pipeline example using the CLI function `get-tokens` of the package 
@@ -127,22 +143,31 @@ and
 ### Packages
 
 [AAp1] Anton Antonov,
-[Grammar::TokenProcessing Raku package](https://github.com/antononcube/Raku-Grammar-TokenProcessing),
+[Grammar::TokenProcessing, Raku package](https://github.com/antononcube/Raku-Grammar-TokenProcessing),
 (2022),
 [GitHub/antononcube](https://github.com/antononcube).
 
 [AAp2] Anton Antonov,
-[DSL::Bulgarian Raku package](https://github.com/antononcube/Raku-DSL-Bulgarian),
+[DSL::Bulgarian, Raku package](https://github.com/antononcube/Raku-DSL-Bulgarian),
 (2022),
 [GitHub/antononcube](https://github.com/antononcube).
 
 [AAp3] Anton Antonov,
-[DSL::Portuguese Raku package](https://github.com/antononcube/Raku-DSL-Portuguese),
+[DSL::Portuguese, Raku package](https://github.com/antononcube/Raku-DSL-Portuguese),
 (2023),
 [GitHub/antononcube](https://github.com/antononcube).
 
 [AAp3] Anton Antonov,
-[DSL::Russian Raku package](https://github.com/antononcube/Raku-DSL-Russian),
+[DSL::Russian, Raku package](https://github.com/antononcube/Raku-DSL-Russian),
 (2022),
 [GitHub/antononcube](https://github.com/antononcube).
 
+[AAp4] Anton Antonov,
+[Lingua::Stem::Bulgarian, Raku package](https://github.com/antononcube/Raku-Lingua-Stem-Bulgarian),
+(2022),
+[GitHub/antononcube](https://github.com/antononcube).
+
+[AAp5] Anton Antonov,
+[Lingua::Stem::Russian, Raku package](https://github.com/antononcube/Raku-Lingua-Stem-Russian),
+(2023),
+[GitHub/antononcube](https://github.com/antononcube).
