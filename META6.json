@@ -1,28 +1,23 @@
 {
-  "name": "Lingua::Stem::Portuguese",
-  "description": "Package for stemming Portuguese words.",
-  "version": "0.1.1",
-  "perl": "6.d",
-  "authors": [
-    "Anton Antonov"
-  ],
-  "auth": "zef:antononcube",
-  "depends": [],
-  "build-depends": [],
-  "test-depends": [],
-  "provides": {
-    "Lingua::Stem::Portuguese": "lib/Lingua/Stem/Portuguese/PortugueseStem.rakumod"
-  },
-  "resources": [
-  ],
-  "license": "Artistic-2.0",
-  "tags": [
-    "stem",
-    "stemming",
-    "stemmer",
-    "Portuguese",
-    "inflectional stemmer"
-  ],
-  "api": "1",
-  "source-url": "https://github.com/antononcube/Raku-Lingua-Stem-Portuguese.git"
+    "name": "Lingua::Stem::Portuguese",
+    "description": "Package for stemming Portuguese words.",
+    "version": "0.1.2",
+    "authors": [
+        "Anton Antonov"
+    ],
+    "auth": "zef:antononcube",
+    "build-depends": [],
+    "provides": {
+        "Lingua::Stem::Portuguese": "lib/Lingua/Stem/Portuguese/PortugueseStem.rakumod"
+    },
+    "license": "Artistic-2.0",
+    "tags": [
+        "stem",
+        "stemming",
+        "stemmer",
+        "Portuguese",
+        "inflectional stemmer"
+    ],
+    "api": "1",
+    "source-url": "https://github.com/antononcube/Raku-Lingua-Stem-Portuguese.git"
 }
